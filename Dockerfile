@@ -25,3 +25,4 @@ ADD assets/install.sh /opt/install.sh
 
 # Run
 CMD /opt/install.sh;/usr/bin/supervisord -c /etc/supervisor/supervisord.conf
+
