@@ -12,8 +12,8 @@ RUN apt-get -y remove openssl libssl-dev
 RUN apt-get -y install gcc curl wget make
 RUN mkdir -p /build/openssl
 RUN curl -s https://www.openssl.org/source/openssl-1.1.1k.tar.gz -k | tar -C /build/openssl -xzf - && cd /build/openssl/openssl-1.1.1k && ./Configure shared linux-x86_64 && make && make install
-RUN cp /build/openssl/openssl-1.1.1k/libcrypto.so.1.0.0 /lib/x86_64-linux-gnu/
-RUN cp /build/openssl/openssl-1.1.1k/libssl.so.1.0.0 /lib/x86_64-linux-gnu/
+RUN cp /build/openssl/openssl-1.1.1k/libcrypto.so.1.1 /lib/x86_64-linux-gnu/
+RUN cp /build/openssl/openssl-1.1.1k/libssl.so.1.1 /lib/x86_64-linux-gnu/
 RUN cp /build/openssl/openssl-1.1.1k/apps/openssl /usr/bin
 
 # Start editing
